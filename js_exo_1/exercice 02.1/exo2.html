@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 1</title>
+  </head>
+  <body>
+      <img src="images/image1.jpg" id="image1" onmouseover="image_change(this)"/>
+      <img src="images/image2.jpg" id="image2" onmouseover="image_change(this)"/>
+      <img src="images/image3.jpg" id="image3" onmouseover="image_change(this)"/>
+      <img src="images/image4.jpg" id="image4" onmouseover="image_change(this)"/>
+      <img src="images/image5.jpg" id="image5" onmouseover="image_change(this)"/>
+      
+      <script>
+          function image_change(target) {
+              var tata = "images/"+target.id+"_2.jpg";
+              target.src=tata;
+          };
+      </script>
+  </body>
+</html>

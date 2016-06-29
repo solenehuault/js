@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <script>
+            var nom = prompt("Quel est votre nom ?");
+            var prenom = prompt("Quel est votre prénom ?");
+            var ville = prompt("D'où venez-vous ?");
+            alert("Récapitulons, vous ếtes " + nom + " " + prenom + " Et vous venez de " + ville);
+            
+            var age = prompt("Quel est votre âge ?");
+            if (age < 18) {
+                alert("Vous êtes mineur");
+            }
+            else {
+                alert("Vous êtes majeur");
+            }
+            
+            var genre = prompt("Êtes vous un garçon ou une fille ?");
+            var natio = prompt("De quelle nationalité êtes vous ?");
+            var un;
+            if (genre == "fille") {
+                un = "une";
+            }
+            else {
+                un = "un";
+            }
+            alert("Vous êtes " + un + " " + genre + " de nationalité " + natio);
+        </script>
+    </body>
+</html>
