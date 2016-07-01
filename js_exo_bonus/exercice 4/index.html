@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 4</title>
+  </head>
+  <body onload="dessin()">
+	<canvas id="ligne" width="200" height="200"></canvas>
+	<canvas id="carre_plein" width="200" height="200"></canvas>
+	<canvas id="carre_vide" width="200" height="200"></canvas>
+	<canvas id="triangle_plein" width="200" height="200"></canvas>
+	<canvas id="triangle_vide" width="200" height="200"></canvas> 
+      <script>
+      	function dessin() { 
+		//ligne
+		var draw = document.getElementById("ligne");
+		var draw_context = draw.getContext("2d");
+		draw_context.moveTo(150,75);
+		draw_context.lineTo(0,75);
+		draw_context.stroke();
+
+
+		//carre plein
+		var draw = document.getElementById("carre_plein");
+		var draw_context = draw.getContext("2d");
+		draw_context.fillRect(0,0,150,150);
+
+
+		//carre vide
+		var draw = document.getElementById("carre_vide");
+		var draw_context = draw.getContext("2d");
+		draw_context.moveTo(0,0);
+		draw_context.lineTo(100,0);
+		draw_context.lineTo(100,100);
+		draw_context.lineTo(0,100);
+		draw_context.lineTo(0,0);
+
+		draw_context.stroke();
+
+
+		//triangle plein
+		var draw = document.getElementById("triangle_plein");
+		var draw_context = draw.getContext("2d");
+		draw_context.moveTo(100,0);
+		draw_context.lineTo(200,200);
+		draw_context.lineTo(0,200);
+		draw_context.lineTo(100,0);
+		
+		draw_context.stroke();		
+		draw_context.fill();
+		
+
+
+		//triangle vide
+		var draw = document.getElementById("triangle_vide");
+		var draw_context = draw.getContext("2d");
+		draw_context.moveTo(100,0);
+		draw_context.lineTo(200,200);
+		draw_context.lineTo(0,200);
+		draw_context.lineTo(100,0);
+
+		draw_context.stroke();
+
+			
+	};
+      </script>
+  </body>
+</html>
