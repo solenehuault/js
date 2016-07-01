@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Exercice 3</title>
+  </head>
+  <body onload="franc_euro()">
+	<div>
+		<table id="tableau">
+			<tr>
+				<th>francs</th>
+				<th>euros</th>
+			</tr>
+		</table>
+	</div>
+      <script>
+      	function franc_euro(){
+		for (i = 0; i <= 1000; i += 50) {
+			var euro = i * 0.1524;
+			var tata = document.getElementById("tableau").innerHTML;
+			var toto = tata + "<tr><td>" + i + "</td><td>" + euro.toFixed(2) + "</td></tr>";
+			document.getElementById("tableau").innerHTML=toto;
+			tata = document.getElementById("tableau").innerHTML;
+		}
+	};
+      </script>
+  </body>
+</html>
