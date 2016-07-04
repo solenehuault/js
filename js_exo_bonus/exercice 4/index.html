@@ -9,7 +9,8 @@
 	<canvas id="carre_plein" width="200" height="200"></canvas>
 	<canvas id="carre_vide" width="200" height="200"></canvas>
 	<canvas id="triangle_plein" width="200" height="200"></canvas>
-	<canvas id="triangle_vide" width="200" height="200"></canvas> 
+	<canvas id="triangle_vide" width="200" height="200"></canvas>
+	<canvas id="smile" width="200" height="200"></canvas>
       <script>
       	function dessin() { 
 		//ligne
@@ -58,10 +59,20 @@
 		draw_context.lineTo(200,200);
 		draw_context.lineTo(0,200);
 		draw_context.lineTo(100,0);
-
 		draw_context.stroke();
 
-			
+		//smile
+		var draw = document.getElementById("smile");
+		var draw_context = draw.getContext("2d");
+		draw_context.moveTo(20,0);
+		draw_context.lineTo(20,50);
+		draw_context.stroke();
+		draw_context.moveTo(100,0);
+		draw_context.lineTo(100,50);
+		draw_context.stroke();
+		draw_context.moveTo(100,100);
+		draw_context.arc(100,100,50,3.5,2*Math.PI);
+		draw_context.stroke();
 	};
       </script>
   </body>
