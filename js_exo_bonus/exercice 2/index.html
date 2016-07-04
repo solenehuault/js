@@ -13,18 +13,20 @@
     
     <script>
         function check() {
-            var pwd = document.getElementById("motdepasse").value;
-            var conf = document.getElementById("confirmation").value;
-            
-            if (pwd == conf) {
-                document.getElementById("motdepasse").setAttribute("style", "border:green solid 2px");
-                document.getElementById("confirmation").setAttribute("style", "border:green solid 2px");
-            }
-            else {
-                document.getElementById("motdepasse").setAttribute("style", "border:red solid 2px");
-                document.getElementById("confirmation").setAttribute("style", "border:red solid 2px");
-            }
-        };
+		var pwd = document.getElementById("motdepasse").value;
+		var conf = document.getElementById("confirmation").value;
+    
+		if (pwd != "" && conf != "") {
+			if (pwd == conf) {
+				document.getElementById("motdepasse").style.border="green solid 2px";
+				document.getElementById("confirmation").style.border="green solid 2px";
+			}
+			else {
+				document.getElementById("motdepasse").style.border="red solid 2px";
+				document.getElementById("confirmation").style.border="red solid 2px";
+			}
+		}
+	};
     </script>
 </body>
 </html>
